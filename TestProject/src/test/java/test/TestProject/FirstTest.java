@@ -163,10 +163,10 @@ public class FirstTest {
 		Assert.assertTrue("Неверная дата заезда", arrivalDateOnSite.equals(arrivalDate));
 		Assert.assertTrue("Неверная дата выезда", dateOfDepartureOnSite.equals(dateOfDeparture));
 
-		String peopleNumber = "3 Взрослых,2 Детей";
+		String peopleNumber = "3 Взрослых," + "2 Детей";
 		String peopleNumberOnSite = driver
 				.findElement(By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/span[2]"))
-				.getText().replaceAll("\r\n", "");
+				.getText().replaceAll("\n", "");
 		System.out.println(peopleNumberOnSite);
 
 		Assert.assertTrue("Неверная количество гостей", peopleNumberOnSite.equals(peopleNumber));
