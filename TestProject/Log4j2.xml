@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p [%t] %45l - %m%n"/>
+		</Console>
+		<File name="TEMP" fileName="LogOscillograf" append="false">
+			<PatternLayout pattern="%d %p [%t] %l - %m%n"/>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef level="info" ref="CONSOLE"/>
+			<AppenderRef ref="TEMP"/>
+		</Root>
+	</Loggers>
+</Configuration>
